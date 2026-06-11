@@ -1,0 +1,6 @@
+{
+  "name": "Simatei Motorworld",
+  "description": "A premium, professional car dealership platform where customers can browse, filter, and inquire about luxury and affordable vehicles, equipped with an admin management dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
