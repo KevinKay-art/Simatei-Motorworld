@@ -57,7 +57,7 @@ export default function ContactForm({ onSubmitInquiry }: ContactFormProps) {
     <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Title */}
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <span className="text-xs font-mono uppercase tracking-[0.25em] text-[#D4AF37] font-bold block mb-2">Connect With Us</span>
+        <span className="text-xs font-mono uppercase tracking-[0.25em] text-[#E21E26] font-bold block mb-2">Connect With Us</span>
         <h1 className="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
           How Can We Help You Build Your Legacy?
         </h1>
@@ -76,12 +76,12 @@ export default function ContactForm({ onSubmitInquiry }: ContactFormProps) {
             </h3>
  
             <div className="flex items-start space-x-4">
-              <div className="bg-[#D4AF37]/10 p-3 rounded-lg border border-[#D4AF37]/20 text-[#D4AF37]">
+              <div className="bg-[#E21E26]/10 p-3 rounded-lg border border-[#E21E26]/20 text-[#E21E26]">
                 <Phone className="h-5 w-5" />
               </div>
               <div>
                 <span className="block text-xs font-mono text-gray-500 uppercase">Direct Hotlines</span>
-                <a href="tel:0740892332" className="text-base text-white hover:text-[#D4AF37] font-bold transition-colors">
+                <a href="tel:0740892332" className="text-base text-white hover:text-[#E21E26] font-bold transition-colors">
                   0740892332
                 </a>
                 <span className="block text-xs text-gray-400 mt-0.5 font-light">Mon - Sat: 8:00 AM - 6:00 PM</span>
@@ -107,7 +107,7 @@ export default function ContactForm({ onSubmitInquiry }: ContactFormProps) {
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="bg-[#D4AF37]/10 p-3 rounded-lg border border-[#D4AF37]/20 text-[#D4AF37]">
+              <div className="bg-[#E21E26]/10 p-3 rounded-lg border border-[#E21E26]/20 text-[#E21E26]">
                 <MapPin className="h-5 w-5" />
               </div>
               <div>
@@ -120,12 +120,12 @@ export default function ContactForm({ onSubmitInquiry }: ContactFormProps) {
             </div>
             
             <div className="flex items-start space-x-4">
-              <div className="bg-[#D4AF37]/10 p-3 rounded-lg border border-[#D4AF37]/20 text-[#D4AF37]">
+              <div className="bg-[#E21E26]/10 p-3 rounded-lg border border-[#E21E26]/20 text-[#E21E26]">
                 <Mail className="h-5 w-5" />
               </div>
               <div>
                 <span className="block text-xs font-mono text-gray-500 uppercase">Email Enquiries</span>
-                <a href="mailto:info@simatei.example.com" className="text-sm font-semibold text-white hover:text-[#D4AF37] transition-colors">
+                <a href="mailto:info@simatei.example.com" className="text-sm font-semibold text-white hover:text-[#E21E26] transition-colors">
                   info@simateimotorworld.co.ke
                 </a>
               </div>
@@ -149,7 +149,7 @@ export default function ContactForm({ onSubmitInquiry }: ContactFormProps) {
                   rel="noopener noreferrer"
                   className={`flex items-center space-x-3 p-3 bg-white/[0.02] border border-white/5 rounded-xl transition-all duration-300 ${social.color}`}
                 >
-                  <div className="text-[#D4AF37]">
+                  <div className="text-[#E21E26]">
                     {social.name === "Facebook" && <Facebook className="h-4 w-4" />}
                     {social.name === "Instagram" && <Instagram className="h-4 w-4" />}
                     {social.name === "YouTube" && <Youtube className="h-4 w-4" />}
@@ -187,7 +187,7 @@ export default function ContactForm({ onSubmitInquiry }: ContactFormProps) {
                 <button
                   type="button"
                   onClick={() => setSuccess(false)}
-                  className="mt-6 px-6 py-2.5 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-black font-semibold text-xs uppercase tracking-wider rounded-lg transition-colors select-none"
+                  className="mt-6 px-6 py-2.5 bg-[#E21E26] hover:bg-[#C3141F] text-white font-semibold text-xs uppercase tracking-wider rounded-lg transition-colors select-none"
                 >
                   Send another inquiry
                 </button>
@@ -204,7 +204,7 @@ export default function ContactForm({ onSubmitInquiry }: ContactFormProps) {
                       placeholder="e.g. Kevin Kipyegon"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="w-full bg-[#0d0f11] text-sm text-white placeholder-gray-600 px-4 py-3.5 rounded-xl border border-white/10 focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] focus:outline-none transition-all"
+                      className="w-full bg-[#0d0f11] text-sm text-white placeholder-gray-600 px-4 py-3.5 rounded-xl border border-white/10 focus:border-[#E21E26] focus:ring-1 focus:ring-[#E21E26] focus:outline-none transition-all"
                       required
                     />
                   </div>
@@ -217,7 +217,7 @@ export default function ContactForm({ onSubmitInquiry }: ContactFormProps) {
                       placeholder="e.g. kevin@example.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full bg-[#0d0f11] text-sm text-white placeholder-gray-600 px-4 py-3.5 rounded-xl border border-white/10 focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] focus:outline-none transition-all"
+                      className="w-full bg-[#0d0f11] text-sm text-white placeholder-gray-600 px-4 py-3.5 rounded-xl border border-white/10 focus:border-[#E21E26] focus:ring-1 focus:ring-[#E21E26] focus:outline-none transition-all"
                       required
                     />
                   </div>
@@ -232,7 +232,7 @@ export default function ContactForm({ onSubmitInquiry }: ContactFormProps) {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     rows={5}
-                    className="w-full bg-[#0d0f11] text-sm text-white placeholder-gray-600 px-4 py-3 rounded-xl border border-white/10 focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] focus:outline-none transition-all resize-none"
+                    className="w-full bg-[#0d0f11] text-sm text-white placeholder-gray-600 px-4 py-3 rounded-xl border border-white/10 focus:border-[#E21E26] focus:ring-1 focus:ring-[#E21E26] focus:outline-none transition-all resize-none"
                     required
                   />
                 </div>
@@ -244,7 +244,7 @@ export default function ContactForm({ onSubmitInquiry }: ContactFormProps) {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full cursor-pointer flex items-center justify-center space-x-2 py-3.5 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-black font-bold text-sm uppercase tracking-wider rounded-xl shadow-lg transition-all active:scale-[0.98]"
+                  className="w-full cursor-pointer flex items-center justify-center space-x-2 py-3.5 bg-[#E21E26] hover:bg-[#C3141F] text-white font-bold text-sm uppercase tracking-wider rounded-xl shadow-lg transition-all active:scale-[0.98]"
                 >
                   <Send className="h-4 w-4" />
                   <span>{isSubmitting ? "Sending message..." : "Send Secure Message"}</span>
@@ -256,7 +256,7 @@ export default function ContactForm({ onSubmitInquiry }: ContactFormProps) {
           {/* Map */}
           <div className="bg-[#111] border border-white/5 p-4 rounded-2xl shadow-xl">
             <h4 className="text-xs uppercase font-mono tracking-wider text-gray-400 mb-3 px-2 flex items-center space-x-2">
-              <MapPin className="h-4 w-4 text-[#D4AF37]" />
+              <MapPin className="h-4 w-4 text-[#E21E26]" />
               <span>Simatei Showroom Map Guide (Nairobi)</span>
             </h4>
             <div className="aspect-video w-full rounded-xl overflow-hidden grayscale opacity-80 border border-white/5 focus:grayscale-0 hover:grayscale-0 transition-all duration-300">

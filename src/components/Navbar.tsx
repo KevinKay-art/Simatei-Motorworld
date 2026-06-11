@@ -29,18 +29,15 @@ export default function Navbar({ currentTab, setCurrentTab, isAdmin, logout }: N
           {/* Logo */}
           <div 
             onClick={() => setCurrentTab("home")} 
-            className="flex items-center space-x-3 cursor-pointer group"
+            className="flex items-center cursor-pointer group py-1"
           >
-            <div className="w-10 h-10 bg-[#D4AF37] rounded flex items-center justify-center font-bold text-black text-xl group-hover:scale-105 transition-transform duration-300">
-              S
-            </div>
-            <div>
-              <span className="font-display text-lg font-bold tracking-tight text-white block">
-                SIMATEI <span className="text-[#D4AF37]">MOTORWORLD</span>
-              </span>
-              <span className="text-[9px] font-mono uppercase tracking-[0.25em] text-white/50 block -mt-1">
-                Motion Reimagined
-              </span>
+            <div className="h-12 bg-white rounded-lg p-1 px-3 flex items-center justify-center shadow-lg group-hover:scale-102 transition-transform duration-300">
+              <img 
+                src="/simatei-logo.jpg" 
+                alt="Simatei Motorworld" 
+                className="h-10 w-auto object-contain"
+                referrerPolicy="no-referrer"
+              />
             </div>
           </div>
  
@@ -56,7 +53,7 @@ export default function Navbar({ currentTab, setCurrentTab, isAdmin, logout }: N
                 }}
                 className={`px-4 py-2 text-xs font-medium uppercase tracking-widest transition-all duration-300 ${
                   currentTab === item.id
-                    ? "text-[#D4AF37] border-b-2 border-[#D4AF37] font-bold"
+                    ? "text-[#E21E26] border-b-2 border-[#E21E26] font-bold"
                     : "text-white/70 hover:text-white"
                 }`}
               >
@@ -65,17 +62,17 @@ export default function Navbar({ currentTab, setCurrentTab, isAdmin, logout }: N
             ))}
  
             <button
-              id="nav-admin"
+               id="nav-admin"
               onClick={() => setCurrentTab("admin")}
               className={`flex items-center space-x-1.5 px-4 py-2 text-xs font-medium uppercase tracking-widest transition-all duration-300 ${
                 currentTab === "admin"
-                  ? "text-[#D4AF37] border-b-2 border-[#D4AF37] font-bold"
+                  ? "text-[#E21E26] border-b-2 border-[#E21E26] font-bold"
                   : "text-white/50 hover:text-white"
               }`}
             >
               {isAdmin ? (
                 <>
-                  <ShieldCheck className="h-4 w-4 text-[#D4AF37]" />
+                  <ShieldCheck className="h-4 w-4 text-[#E21E26]" />
                   <span>Dashboard</span>
                 </>
               ) : (
@@ -100,9 +97,9 @@ export default function Navbar({ currentTab, setCurrentTab, isAdmin, logout }: N
             
             <a 
               href="tel:0740892332"
-              className="ml-6 flex items-center space-x-2 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-black font-extrabold text-xs uppercase tracking-wider px-5 py-2.5 rounded-full transition-all duration-300"
+              className="ml-6 flex items-center space-x-2 bg-[#E21E26] hover:bg-[#C3141F] text-white font-extrabold text-xs uppercase tracking-wider px-5 py-2.5 rounded-full transition-all duration-300 shadow-md shadow-[#E21E26]/10 animate-pulse-subtle"
             >
-              <Phone className="h-3.5 w-3.5" />
+              <Phone className="h-3.5 w-3.5 text-white" />
               <span>Call 0740892332</span>
             </a>
           </div>
@@ -124,7 +121,7 @@ export default function Navbar({ currentTab, setCurrentTab, isAdmin, logout }: N
               className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/5 focus:outline-none"
             >
               {mobileMenuOpen ? (
-                <X className="h-6 w-6 text-[#D4AF37]" />
+                <X className="h-6 w-6 text-[#E21E26]" />
               ) : (
                 <Menu className="h-6 w-6" />
               )}
@@ -145,8 +142,8 @@ export default function Navbar({ currentTab, setCurrentTab, isAdmin, logout }: N
               }}
               className={`block w-full text-left px-4 py-3 rounded-md text-base font-medium transition-all duration-200 ${
                 currentTab === item.id
-                  ? "text-[#D4AF37] bg-white/5 font-semibold"
-                  : "text-gray-300 hover:text-[#D4AF37]"
+                  ? "text-[#E21E26] bg-white/5 font-semibold"
+                  : "text-gray-300 hover:text-[#E21E26]"
               }`}
             >
               {item.label}
@@ -160,13 +157,13 @@ export default function Navbar({ currentTab, setCurrentTab, isAdmin, logout }: N
             }}
             className={`flex items-center space-x-2 w-full text-left px-4 py-3 rounded-md text-base font-medium transition-all duration-200 ${
               currentTab === "admin"
-                ? "text-[#D4AF37] bg-white/5 font-semibold"
-                : "text-gray-300 hover:text-[#D4AF37]"
+                ? "text-[#E21E26] bg-white/5 font-semibold"
+                : "text-gray-300 hover:text-[#E21E26]"
             }`}
           >
             {isAdmin ? (
               <>
-                <ShieldCheck className="h-5 w-5 text-[#D4AF37]" />
+                <ShieldCheck className="h-5 w-5 text-[#E21E26]" />
                 <span>Admin Dashboard</span>
               </>
             ) : (
@@ -179,7 +176,7 @@ export default function Navbar({ currentTab, setCurrentTab, isAdmin, logout }: N
 
           <a 
             href="tel:0740892332"
-            className="flex items-center justify-center space-x-2 w-full mt-4 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-black font-semibold py-3 rounded-lg text-center"
+            className="flex items-center justify-center space-x-2 w-full mt-4 bg-[#E21E26] hover:bg-[#C3141F] text-white font-semibold py-3 rounded-lg text-center shadow-lg transition-colors"
           >
             <Phone className="h-4 w-4" />
             <span>Call 0740892332</span>

@@ -307,22 +307,29 @@ export default function AdminPanel({
     return (
       <section className="py-24 max-w-md mx-auto px-4 select-none">
         <div className="bg-[#111] border border-white/10 rounded-2xl shadow-2xl p-8 text-center relative overflow-hidden">
-          <div className="absolute top-0 inset-x-0 h-[3px] bg-gradient-to-r from-[#D4AF37] to-[#F27D26]" />
+          <div className="absolute top-0 inset-x-0 h-[3px] bg-gradient-to-r from-[#E21E26] via-[#E21E26] to-[#C3141F]" />
           
-          <div className="inline-flex bg-[#D4AF37]/10 p-3.5 rounded-full border border-[#D4AF37]/20 text-[#D4AF37] mb-5">
-            <KeyRound className="h-6 w-6 stroke-[2.2]" />
+          <div className="mb-6 flex justify-center">
+            <div className="bg-white rounded-lg p-1.5 px-4 shadow-xl inline-block">
+              <img 
+                src="/simatei-logo.jpg" 
+                alt="Simatei Logo" 
+                className="h-10 object-contain mx-auto"
+                referrerPolicy="no-referrer"
+              />
+            </div>
           </div>
 
-          <h1 className="font-display text-2xl font-bold text-white tracking-tight">
-            Simatei Staff Portal
+          <h1 className="font-display text-xl font-bold text-white tracking-tight mt-2">
+            Staff Portal Access
           </h1>
-          <p className="text-gray-400 text-xs font-mono mt-1 uppercase tracking-widest text-[#D4AF37]/70">
+          <p className="text-gray-400 text-xs font-mono mt-1 uppercase tracking-widest text-[#E21E26]/90">
             Secure Gateway Authentication
           </p>
 
           <form onSubmit={handleLoginSubmit} className="mt-8 text-left space-y-4">
             <div>
-              <label className="block text-xs font-mono text-gray-400 uppercase tracking-widest mb-1.5">
+              <label className="block text-xs font-mono text-gray-400 uppercase tracking-widest mb-1.5 font-bold">
                 Portal Password
               </label>
               <input
@@ -330,7 +337,7 @@ export default function AdminPanel({
                 placeholder="Enter Staff Password (default: admin123)"
                 value={passwordInput}
                 onChange={(e) => setPasswordInput(e.target.value)}
-                className="w-full bg-[#0d0f11] text-sm text-white placeholder-gray-600 px-4 py-3.5 rounded-xl border border-white/10 focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] focus:outline-none transition-all text-center tracking-normal placeholder:tracking-normal"
+                className="w-full bg-[#0d0f11] text-sm text-white placeholder-gray-600 px-4 py-3.5 rounded-xl border border-white/10 focus:border-[#E21E26] focus:ring-1 focus:ring-[#E21E26] focus:outline-none transition-all text-center tracking-normal placeholder:tracking-normal"
                 required
                 autoFocus
               />
@@ -346,7 +353,7 @@ export default function AdminPanel({
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full cursor-pointer flex items-center justify-center space-x-2 py-3.5 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-black font-semibold text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-[#D4AF37]/10 active:scale-95 transition-all"
+              className="w-full cursor-pointer flex items-center justify-center space-x-2 py-3.5 bg-[#E21E26] hover:bg-[#C3141F] text-white font-semibold text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-[#E21E26]/15 active:scale-95 transition-all"
             >
               {isLoading ? (
                 <>
@@ -360,7 +367,7 @@ export default function AdminPanel({
           </form>
 
           <div className="mt-8 text-[11px] text-gray-500 font-mono flex items-center justify-center space-x-1">
-            <AlertCircle className="h-3 w-3 text-[#D4AF37]/50" />
+            <AlertCircle className="h-3 w-3 text-[#E21E26]/70" />
             <span>Authorized administrators only. IP logs active.</span>
           </div>
         </div>
@@ -374,7 +381,7 @@ export default function AdminPanel({
       {/* Title Controls Header */}
       <div className="bg-[#111] border border-white/5 rounded-2xl p-6 mb-10 shadow-xl flex flex-col md:flex-row md:items-center md:justify-between gap-6">
         <div>
-          <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#D4AF37] font-semibold block bg-[#D4AF37]/10 px-2.5 py-1 rounded w-fit mb-2">
+          <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#E21E26] font-semibold block bg-[#E21E26]/10 px-2.5 py-1 rounded w-fit mb-2">
             Administrator Office
           </span>
           <h1 className="font-display text-2xl font-bold tracking-tight text-white">
@@ -393,7 +400,7 @@ export default function AdminPanel({
               await onRefreshCars();
               await onRefreshInquiries();
             }}
-            className="p-2.5 bg-white/5 hover:bg-white/10 text-gray-300 rounded-lg hover:text-[#D4AF37] transition-colors cursor-pointer"
+            className="p-2.5 bg-white/5 hover:bg-white/10 text-gray-300 rounded-lg hover:text-[#E21E26] transition-colors cursor-pointer"
             title="Reload backend data stores"
           >
             <RefreshCw className="h-4.5 w-4.5" />
@@ -403,7 +410,7 @@ export default function AdminPanel({
             onClick={() => setAdminTab("listings")}
             className={`px-4.5 py-2.5 rounded-lg text-xs uppercase font-mono tracking-wider font-semibold select-none cursor-pointer transition-colors duration-200 ${
               adminTab === "listings"
-                ? "bg-[#D4AF37] text-black"
+                ? "bg-[#E21E26] text-white"
                 : "bg-white/5 text-gray-300 hover:bg-white/10"
             }`}
           >
@@ -414,7 +421,7 @@ export default function AdminPanel({
             onClick={() => setAdminTab("inquiries")}
             className={`px-4.5 py-2.5 rounded-lg text-xs uppercase font-mono tracking-wider font-semibold select-none cursor-pointer relative transition-colors duration-200 ${
               adminTab === "inquiries"
-                ? "bg-[#D4AF37] text-black"
+                ? "bg-[#E21E26] text-white"
                 : "bg-white/5 text-gray-300 hover:bg-white/10"
             }`}
           >
@@ -454,7 +461,7 @@ export default function AdminPanel({
 
               <button
                 onClick={openAddForm}
-                className="flex items-center space-x-1.5 px-4.5 py-2.5 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-black font-bold text-xs uppercase tracking-wider rounded-lg shadow-lg shadow-[#D4AF37]/15 cursor-pointer select-none"
+                className="flex items-center space-x-1.5 px-4.5 py-2.5 bg-[#E21E26] hover:bg-[#C3141F] text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-lg shadow-[#E21E26]/15 cursor-pointer select-none"
               >
                 <Plus className="h-4 w-4 stroke-[2.2]" />
                 <span>Add New Car</span>
@@ -493,9 +500,9 @@ export default function AdminPanel({
                               alt={`${car.make} ${car.model}`}
                               className="w-14 h-10 object-cover rounded-md border border-white/10"
                               referrerPolicy="no-referrer"
-                            />
+                             />
                             <div>
-                              <span className="block text-xs font-mono text-[#D4AF37]/80 font-medium">
+                              <span className="block text-xs font-mono text-[#E21E26]/90 font-medium">
                                 {car.make} • {car.year}
                               </span>
                               <span className="block text-sm font-bold text-white leading-tight">
@@ -510,7 +517,7 @@ export default function AdminPanel({
                             <span className="text-[10px] text-gray-500 mt-0.5">{car.fuelType} • {car.mileage.toLocaleString("en-KE")} km</span>
                           </div>
                         </td>
-                        <td className="px-6 py-4.5 font-display font-medium text-[#D4AF37] text-sm">
+                        <td className="px-6 py-4.5 font-display font-medium text-[#E21E26] text-sm font-bold">
                           {formatKEPrice(car.price)}
                         </td>
                         <td className="px-6 py-4.5">
@@ -532,7 +539,7 @@ export default function AdminPanel({
                           <div className="inline-flex space-x-1.5">
                             <button
                               onClick={() => openEditForm(car)}
-                              className="p-2 bg-white/5 hover:bg-[#D4AF37] hover:text-black rounded-lg text-gray-300 transition-colors cursor-pointer"
+                              className="p-2 bg-white/5 hover:bg-[#E21E26] hover:text-white rounded-lg text-gray-300 transition-colors cursor-pointer"
                               title="Edit listing details"
                             >
                               <Edit2 className="h-3.5 w-3.5" />
@@ -579,18 +586,18 @@ export default function AdminPanel({
             ) : (
               <div className="divide-y divide-white/[0.04]">
                 {inquiries.map((inq) => (
-                  <div key={inq.id} className={`p-6 transition-all ${inq.status === 'Unread' ? 'bg-[#D4AF37]/[0.015] border-l-2 border-l-[#D4AF37]' : 'opacity-85'}`}>
+                  <div key={inq.id} className={`p-6 transition-all ${inq.status === 'Unread' ? 'bg-[#E21E26]/[0.015] border-l-2 border-l-[#E21E26]' : 'opacity-85'}`}>
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
                       <div>
                         <div className="flex items-center space-x-2 flex-wrap gap-1.5">
                           <h4 className="text-sm font-bold text-white">{inq.name}</h4>
-                          <span className="text-xs text-[#D4AF37]/80 font-mono font-medium">&lt;{inq.email}&gt;</span>
+                          <span className="text-xs text-[#E21E26]/90 font-mono font-medium">&lt;{inq.email}&gt;</span>
                           <span className="text-[10px] font-mono text-gray-500">
                             {new Date(inq.createdAt).toLocaleString("en-KE")}
                           </span>
                         </div>
                         {inq.carName && (
-                          <span className="inline-block mt-1.5 text-xs text-[#D4AF37] bg-[#D4AF37]/5 border border-[#D4AF37]/10 px-2 py-0.5 rounded-md">
+                          <span className="inline-block mt-1.5 text-xs text-[#E21E26] bg-[#E21E26]/5 border border-[#E21E26]/10 px-2 py-0.5 rounded-md">
                             Car of Interest: <span className="text-white font-medium">{inq.carName}</span>
                           </span>
                         )}
@@ -602,7 +609,7 @@ export default function AdminPanel({
                           onClick={() => handleInquiryStatus(inq.id, inq.status)}
                           className={`flex items-center space-x-1 px-3 py-1.5 rounded-lg border text-xs font-medium cursor-pointer transition-all uppercase font-mono tracking-wider ${
                             inq.status === "Unread"
-                              ? "bg-[#D4AF37]/10 text-[#D4AF37] border-[#D4AF37]/20 hover:bg-[#D4AF37]/20"
+                              ? "bg-[#E21E26]/10 text-[#E21E26] border-[#E21E26]/20 hover:bg-[#E21E26]/20"
                               : "bg-white/5 text-gray-400 border-white/5 hover:bg-white/10"
                           }`}
                         >
@@ -669,7 +676,7 @@ export default function AdminPanel({
                     <select
                       value={make}
                       onChange={(e) => setMake(e.target.value)}
-                      className="w-full bg-[#0d0f11] text-sm text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                      className="w-full bg-[#0d0f11] text-sm text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                     >
                       <option value="Toyota">Toyota</option>
                       <option value="Mercedes-Benz">Mercedes-Benz</option>
@@ -690,7 +697,7 @@ export default function AdminPanel({
                       placeholder="e.g. Prado TX-L"
                       value={model}
                       onChange={(e) => setModel(e.target.value)}
-                      className="w-full bg-[#0d0f11] text-sm text-white px-3.5 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                      className="w-full bg-[#0d0f11] text-sm text-white px-3.5 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                       required
                     />
                   </div>
@@ -700,7 +707,7 @@ export default function AdminPanel({
                       type="number"
                       value={year}
                       onChange={(e) => setYear(Number(e.target.value))}
-                      className="w-full bg-[#0d0f11] text-sm text-white px-3.5 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                      className="w-full bg-[#0d0f11] text-sm text-white px-3.5 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                       min={1990}
                       max={2027}
                       required
@@ -715,7 +722,7 @@ export default function AdminPanel({
                       type="number"
                       value={price}
                       onChange={(e) => setPrice(Number(e.target.value))}
-                      className="w-full bg-[#0d0f11] text-sm text-white px-3.5 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                      className="w-full bg-[#0d0f11] text-sm text-white px-3.5 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                       min={10000}
                       required
                     />
@@ -726,7 +733,7 @@ export default function AdminPanel({
                       type="number"
                       value={mileage}
                       onChange={(e) => setMileage(Number(e.target.value))}
-                      className="w-full bg-[#0d0f11] text-sm text-white px-3.5 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                      className="w-full bg-[#0d0f11] text-sm text-white px-3.5 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                       min={0}
                       required
                     />
@@ -738,7 +745,7 @@ export default function AdminPanel({
                       placeholder="e.g. 2.8L D-4D diesel"
                       value={engine}
                       onChange={(e) => setEngine(e.target.value)}
-                      className="w-full bg-[#0d0f11] text-sm text-white px-3.5 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                      className="w-full bg-[#0d0f11] text-sm text-white px-3.5 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                       required
                     />
                   </div>
@@ -750,7 +757,7 @@ export default function AdminPanel({
                     <select
                       value={fuelType}
                       onChange={(e) => setFuelType(e.target.value as any)}
-                      className="w-full bg-[#0d0f11] text-sm text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                      className="w-full bg-[#0d0f11] text-sm text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                     >
                       <option value="Petrol">Petrol</option>
                       <option value="Diesel">Diesel</option>
@@ -763,7 +770,7 @@ export default function AdminPanel({
                     <select
                       value={transmission}
                       onChange={(e) => setTransmission(e.target.value as any)}
-                      className="w-full bg-[#0d0f11] text-sm text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                      className="w-full bg-[#0d0f11] text-sm text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                     >
                       <option value="Automatic">Automatic</option>
                       <option value="Manual">Manual</option>
@@ -776,7 +783,7 @@ export default function AdminPanel({
                       placeholder="e.g. Pearl White"
                       value={color}
                       onChange={(e) => setColor(e.target.value)}
-                      className="w-full bg-[#0d0f11] text-sm text-white px-3.5 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                      className="w-full bg-[#0d0f11] text-sm text-white px-3.5 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                       required
                     />
                   </div>
@@ -785,7 +792,7 @@ export default function AdminPanel({
                     <select
                       value={status}
                       onChange={(e) => setStatus(e.target.value as any)}
-                      className="w-full bg-[#0d0f11] text-sm text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                      className="w-full bg-[#0d0f11] text-sm text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                     >
                       <option value="Available">Available</option>
                       <option value="Sold">Sold</option>
@@ -795,7 +802,7 @@ export default function AdminPanel({
 
                 {/* Kai & Karo Premium Spec Fields */}
                 <div className="border-t border-white/5 pt-5 pb-1 space-y-4">
-                  <h4 className="text-xs font-mono uppercase text-[#D4AF37] tracking-wider font-bold">Kai & Karo Specification Structure</h4>
+                  <h4 className="text-xs font-mono uppercase text-[#E21E26] tracking-wider font-bold">Kai & Karo Specification Structure</h4>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     <div>
@@ -805,7 +812,7 @@ export default function AdminPanel({
                         placeholder="e.g. Beige Leather"
                         value={interiorColor}
                         onChange={(e) => setInteriorColor(e.target.value)}
-                        className="w-full bg-[#0d0f11] text-sm text-white px-3.5 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                        className="w-full bg-[#0d0f11] text-sm text-white px-3.5 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                         required
                       />
                     </div>
@@ -814,7 +821,7 @@ export default function AdminPanel({
                       <select
                         value={driveType}
                         onChange={(e) => setDriveType(e.target.value as any)}
-                        className="w-full bg-[#0d0f11] text-sm text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                        className="w-full bg-[#0d0f11] text-sm text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                       >
                         <option value="AWD">AWD (All-Wheel Drive)</option>
                         <option value="4WD">4WD (Four-Wheel Drive)</option>
@@ -824,11 +831,11 @@ export default function AdminPanel({
                       </select>
                     </div>
                     <div>
-                      <label className="block text-xs font-mono text-gray-400 uppercase mb-1.5 font-bold text-[#D4AF37]">Physical Location *</label>
+                      <label className="block text-xs font-mono text-gray-400 uppercase mb-1.5 font-bold text-[#E21E26]">Physical Location *</label>
                       <select
                         value={location}
                         onChange={(e) => setLocation(e.target.value as any)}
-                        className="w-full bg-[#0d0f11] text-sm text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none font-bold"
+                        className="w-full bg-[#0d0f11] text-sm text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none font-bold"
                       >
                         <option value="Nairobi">Nairobi Showroom</option>
                         <option value="Mombasa">Mombasa Port/Yard</option>
@@ -843,7 +850,7 @@ export default function AdminPanel({
                       <select
                         value={dutyStatus}
                         onChange={(e) => setDutyStatus(e.target.value as any)}
-                        className="w-full bg-[#0d0f11] text-sm text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                        className="w-full bg-[#0d0f11] text-sm text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                       >
                         <option value="Duty Paid">Duty Paid</option>
                         <option value="Duty Free">Duty Free (Tax Exempt)</option>
@@ -855,7 +862,7 @@ export default function AdminPanel({
                       <select
                         value={importStatus}
                         onChange={(e) => setImportStatus(e.target.value as any)}
-                        className="w-full bg-[#0d0f11] text-sm text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                        className="w-full bg-[#0d0f11] text-sm text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                       >
                         <option value="Foreign Used">Foreign Used (Import)</option>
                         <option value="Locally Used">Locally Used (Kenyan)</option>
@@ -868,7 +875,7 @@ export default function AdminPanel({
                       <select
                         value={bodyType}
                         onChange={(e) => setBodyType(e.target.value as any)}
-                        className="w-full bg-[#0d0f11] text-sm text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                        className="w-full bg-[#0d0f11] text-sm text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                       >
                         <option value="SUV">SUV / Crossover</option>
                         <option value="Sedan">Sedan</option>
@@ -880,13 +887,13 @@ export default function AdminPanel({
                       </select>
                     </div>
                     <div>
-                      <label className="block text-xs font-mono text-[#D4AF37] uppercase mb-1.5 font-semibold">Condition Rating *</label>
+                      <label className="block text-xs font-mono text-[#E21E26] uppercase mb-1.5 font-semibold">Condition Rating *</label>
                       <input
                         type="text"
                         placeholder="e.g. Grade 4.5 / Pristine"
                         value={conditionGrade}
                         onChange={(e) => setConditionGrade(e.target.value)}
-                        className="w-full bg-[#0d0f11] text-sm text-white px-3.5 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                        className="w-full bg-[#0d0f11] text-sm text-white px-3.5 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                         required
                       />
                     </div>
@@ -900,7 +907,7 @@ export default function AdminPanel({
                     placeholder="Sunroof, Leather Seats, Reverse Camera, Harman Kardon"
                     value={featuresInput}
                     onChange={(e) => setFeaturesInput(e.target.value)}
-                    className="w-full bg-[#0d0f11] text-sm text-white px-3.5 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                    className="w-full bg-[#0d0f11] text-sm text-white px-3.5 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                   />
                   <span className="text-[10px] text-gray-500 font-mono mt-1 block">Separate features using a standard comma (e.g. A, B, C)</span>
                 </div>
@@ -912,14 +919,14 @@ export default function AdminPanel({
                       Vehicle Photos Management
                     </h5>
                     {uploadProgress && (
-                      <span className="text-xs text-[#D4AF37] font-mono font-medium animate-pulse">{uploadProgress}</span>
+                      <span className="text-xs text-[#E21E26] font-mono font-medium animate-pulse">{uploadProgress}</span>
                     )}
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {/* Image Slot 1 */}
                     <div className="p-3 bg-[#0d0f11] border border-white/10 rounded-lg space-y-2.5">
-                      <span className="block text-[11px] font-mono text-[#D4AF37]">Image Slot 1 *</span>
+                      <span className="block text-[11px] font-mono text-[#E21E26]">Image Slot 1 *</span>
                       <input
                         type="text"
                         placeholder="Paste image URL..."
@@ -927,7 +934,7 @@ export default function AdminPanel({
                         onChange={(e) => setImageUrl1(e.target.value)}
                         className="w-full bg-zinc-950 text-xs text-white px-2 py-2 rounded border border-white/5 focus:outline-none"
                       />
-                      <label className="flex items-center justify-center space-x-1 border border-dashed border-white/20 hover:border-[#D4AF37]/50 p-2 rounded cursor-pointer text-[10px] font-mono hover:text-white transition-colors">
+                      <label className="flex items-center justify-center space-x-1 border border-dashed border-white/20 hover:border-[#E21E26]/50 p-2 rounded cursor-pointer text-[10px] font-mono hover:text-white transition-colors">
                         <UploadCloud className="h-3.5 w-3.5 text-gray-400" />
                         <span>Upload Custom file</span>
                         <input
@@ -941,7 +948,7 @@ export default function AdminPanel({
 
                     {/* Image Slot 2 */}
                     <div className="p-3 bg-[#0d0f11] border border-white/10 rounded-lg space-y-2.5">
-                      <span className="block text-[11px] font-mono text-[#D4AF37]">Image Slot 2</span>
+                      <span className="block text-[11px] font-mono text-[#E21E26]">Image Slot 2</span>
                       <input
                         type="text"
                         placeholder="Paste image URL..."
@@ -949,7 +956,7 @@ export default function AdminPanel({
                         onChange={(e) => setImageUrl2(e.target.value)}
                         className="w-full bg-zinc-950 text-xs text-white px-2 py-2 rounded border border-white/5 focus:outline-none"
                       />
-                      <label className="flex items-center justify-center space-x-1 border border-dashed border-white/20 hover:border-[#D4AF37]/50 p-2 rounded cursor-pointer text-[10px] font-mono hover:text-white transition-colors">
+                      <label className="flex items-center justify-center space-x-1 border border-dashed border-white/20 hover:border-[#E21E26]/50 p-2 rounded cursor-pointer text-[10px] font-mono hover:text-white transition-colors">
                         <UploadCloud className="h-3.5 w-3.5 text-gray-400" />
                         <span>Upload Custom file</span>
                         <input
@@ -963,7 +970,7 @@ export default function AdminPanel({
 
                     {/* Image Slot 3 */}
                     <div className="p-[#121418] border border-white/10 rounded-lg space-y-2.5 bg-[#0d0f11]">
-                      <span className="block text-[11px] font-mono text-[#D4AF37]">Image Slot 3</span>
+                      <span className="block text-[11px] font-mono text-[#E21E26]">Image Slot 3</span>
                       <input
                         type="text"
                         placeholder="Paste image URL..."
@@ -971,7 +978,7 @@ export default function AdminPanel({
                         onChange={(e) => setImageUrl3(e.target.value)}
                         className="w-full bg-zinc-950 text-xs text-white px-2 py-2 rounded border border-white/5 focus:outline-none"
                       />
-                      <label className="flex items-center justify-center space-x-1 border border-dashed border-white/20 hover:border-[#D4AF37]/50 p-2 rounded cursor-pointer text-[10px] font-mono hover:text-white transition-colors">
+                      <label className="flex items-center justify-center space-x-1 border border-dashed border-white/20 hover:border-[#E21E26]/50 p-2 rounded cursor-pointer text-[10px] font-mono hover:text-white transition-colors">
                         <UploadCloud className="h-3.5 w-3.5 text-gray-400" />
                         <span>Upload Custom file</span>
                         <input
@@ -986,13 +993,13 @@ export default function AdminPanel({
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono text-gray-400 uppercase mb-1.5">Vehicle Narrative Description *</label>
+                   <label className="block text-xs font-mono text-gray-400 uppercase mb-1.5">Vehicle Narrative Description *</label>
                   <textarea
                     placeholder="Enter comprehensive notes describing this vehicle's conditions, past service, and value propositions..."
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     rows={4}
-                    className="w-full bg-[#0d0f11] text-sm text-white px-3.5 py-3 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                    className="w-full bg-[#0d0f11] text-sm text-white px-3.5 py-3 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                     required
                   />
                 </div>
@@ -1012,7 +1019,7 @@ export default function AdminPanel({
                   <button
                     type="submit"
                     disabled={isSubmittingForm}
-                    className="px-6 py-2.5 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-black font-bold text-xs uppercase tracking-wider rounded-lg shadow-lg cursor-pointer flex items-center space-x-2"
+                    className="px-6 py-2.5 bg-[#E21E26] hover:bg-[#C3141F] text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-lg cursor-pointer flex items-center space-x-2"
                   >
                     {isSubmittingForm ? (
                       <>

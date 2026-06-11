@@ -91,7 +91,7 @@ export default function CarDetailModal({ car, onClose, onSubmitInquiry }: CarDet
         {/* Close Button Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-40 bg-black/60 hover:bg-black/80 text-white p-2.5 rounded-full border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-200"
+          className="absolute top-4 right-4 z-40 bg-black/60 hover:bg-black/80 text-white p-2.5 rounded-full border border-white/10 hover:border-[#E21E26]/30 transition-all duration-200"
           title="Close details drawer"
         >
           <X className="h-5 w-5" />
@@ -121,13 +121,13 @@ export default function CarDetailModal({ car, onClose, onSubmitInquiry }: CarDet
                 <>
                   <button
                     onClick={prevImage}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-[#D4AF37] hover:text-black text-white p-2.5 rounded-full border border-white/5 transition-all"
+                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-[#E21E26] hover:text-white text-white p-2.5 rounded-full border border-white/5 transition-all"
                   >
                     <ChevronLeft className="h-5 w-5" />
                   </button>
                   <button
                     onClick={nextImage}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-[#D4AF37] hover:text-black text-white p-2.5 rounded-full border border-white/5 transition-all"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-[#E21E26] hover:text-white text-white p-2.5 rounded-full border border-white/5 transition-all"
                   >
                     <ChevronRight className="h-5 w-5" />
                   </button>
@@ -144,7 +144,7 @@ export default function CarDetailModal({ car, onClose, onSubmitInquiry }: CarDet
                     onClick={() => setActiveImageIndex(index)}
                     className={`relative w-20 h-14 rounded-md overflow-hidden flex-shrink-0 transition-all ${
                       activeImageIndex === index
-                        ? "ring-2 ring-[#D4AF37] border-transparent opacity-100"
+                        ? "ring-2 ring-[#E21E26] border-transparent opacity-100"
                         : "opacity-60 hover:opacity-100"
                     }`}
                   >
@@ -161,7 +161,7 @@ export default function CarDetailModal({ car, onClose, onSubmitInquiry }: CarDet
               {/* Header Details */}
               <div className="mb-6">
                 <div className="flex items-center space-x-2 mb-2">
-                  <span className="text-xs font-mono uppercase text-[#D4AF37] font-semibold tracking-widest bg-[#D4AF37]/10 px-2.5 py-1 rounded">
+                  <span className="text-xs font-mono uppercase text-[#E21E26] font-semibold tracking-widest bg-[#E21E26]/10 px-2.5 py-1 rounded">
                     {car.make}
                   </span>
                   <span className="text-xs font-mono text-gray-400 bg-white/5 px-2.5 py-1 rounded">
@@ -173,7 +173,7 @@ export default function CarDetailModal({ car, onClose, onSubmitInquiry }: CarDet
                 </h2>
                 <div className="mt-3 flex items-baseline space-x-2">
                   <span className="text-gray-400 text-sm">Asking Price:</span>
-                  <span className="text-2xl font-display font-medium text-[#D4AF37] tracking-tight font-bold">
+                  <span className="text-2xl font-display font-medium text-[#E21E26] tracking-tight font-bold">
                     {formatPrice(car.price)}
                   </span>
                 </div>
@@ -207,7 +207,7 @@ export default function CarDetailModal({ car, onClose, onSubmitInquiry }: CarDet
                 </div>
                 <div className="p-2.5 bg-white/[0.02] border border-white/5 rounded-lg">
                   <span className="block text-[9px] font-mono text-gray-500 uppercase">Drive Train</span>
-                  <span className="text-xs font-semibold text-[#D4AF37] mt-0.5 block">{car.driveType || "AWD"}</span>
+                  <span className="text-xs font-semibold text-[#E21E26] mt-0.5 block">{car.driveType || "AWD"}</span>
                 </div>
                 <div className="p-2.5 bg-white/[0.02] border border-white/5 rounded-lg">
                   <span className="block text-[9px] font-mono text-gray-500 uppercase">Duty Status</span>
@@ -223,7 +223,7 @@ export default function CarDetailModal({ car, onClose, onSubmitInquiry }: CarDet
                 </div>
                 <div className="p-2.5 bg-white/[0.02] border border-white/5 rounded-lg">
                   <span className="block text-[9px] font-mono text-gray-500 uppercase">Showroom Location</span>
-                  <span className="text-xs font-semibold text-[#D4AF37] mt-0.5 block">{car.location || "Nairobi"}</span>
+                  <span className="text-xs font-semibold text-[#E21E26] mt-0.5 block">{car.location || "Nairobi"}</span>
                 </div>
                 {car.conditionGrade && (
                   <div className="p-2.5 bg-white/[0.02] border border-white/5 rounded-lg">
@@ -271,7 +271,7 @@ export default function CarDetailModal({ car, onClose, onSubmitInquiry }: CarDet
 
             {/* Inquiry Contacts */}
             <div className="mt-auto border-t border-white/5 pt-6">
-              <h4 className="text-[#D4AF37] font-semibold text-sm xl:text-base mb-3.5 flex items-center space-x-1.5">
+              <h4 className="text-[#E21E26] font-semibold text-sm xl:text-base mb-3.5 flex items-center space-x-1.5">
                 <Compass className="h-4.5 w-4.5" />
                 <span>Arrange Booking & Inquiry</span>
               </h4>
@@ -308,7 +308,7 @@ export default function CarDetailModal({ car, onClose, onSubmitInquiry }: CarDet
                     </p>
                     <button
                       onClick={() => setSubmissionSuccess(false)}
-                      className="mt-3 text-xs text-[#D4AF37] font-mono hover:underline"
+                      className="mt-3 text-xs text-[#E21E26] font-mono hover:underline"
                     >
                       Send another message
                     </button>
@@ -321,7 +321,7 @@ export default function CarDetailModal({ car, onClose, onSubmitInquiry }: CarDet
                         placeholder="Your full name"
                         value={inquiryName}
                         onChange={(e) => setInquiryName(e.target.value)}
-                        className="w-full bg-[#0d0f11] text-sm text-white placeholder-gray-500 px-3.5 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] focus:outline-none transition-all"
+                        className="w-full bg-[#0d0f11] text-sm text-white placeholder-gray-500 px-3.5 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:ring-1 focus:ring-[#E21E26] focus:outline-none transition-all"
                         required
                       />
                     </div>
@@ -331,7 +331,7 @@ export default function CarDetailModal({ car, onClose, onSubmitInquiry }: CarDet
                         placeholder="Your email address"
                         value={inquiryEmail}
                         onChange={(e) => setInquiryEmail(e.target.value)}
-                        className="w-full bg-[#0d0f11] text-sm text-white placeholder-gray-500 px-3.5 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] focus:outline-none transition-[#D4AF37]"
+                        className="w-full bg-[#0d0f11] text-sm text-white placeholder-gray-500 px-3.5 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:ring-1 focus:ring-[#E21E26] focus:outline-none transition-all"
                         required
                       />
                     </div>
@@ -341,7 +341,7 @@ export default function CarDetailModal({ car, onClose, onSubmitInquiry }: CarDet
                         value={inquiryMessage}
                         onChange={(e) => setInquiryMessage(e.target.value)}
                         rows={3}
-                        className="w-full bg-[#0d0f11] text-sm text-white placeholder-gray-500 px-3.5 py-2 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] focus:outline-none transition-all resize-none"
+                        className="w-full bg-[#0d0f11] text-sm text-white placeholder-gray-500 px-3.5 py-2 rounded-lg border border-white/10 focus:border-[#E21E26] focus:ring-1 focus:ring-[#E21E26] focus:outline-none transition-all resize-none"
                         required
                       />
                     </div>
@@ -353,7 +353,7 @@ export default function CarDetailModal({ car, onClose, onSubmitInquiry }: CarDet
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full cursor-pointer flex items-center justify-center space-x-2 py-2.5 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-black font-semibold text-xs uppercase tracking-wider rounded-lg transition-colors duration-200"
+                      className="w-full cursor-pointer flex items-center justify-center space-x-2 py-2.5 bg-[#E21E26] hover:bg-[#C3141F] text-white font-semibold text-xs uppercase tracking-wider rounded-lg transition-colors duration-200"
                     >
                       <Send className="h-3.5 w-3.5" />
                       <span>{isSubmitting ? "Sending..." : "Submit Inquiry"}</span>

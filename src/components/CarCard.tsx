@@ -49,7 +49,7 @@ export default function CarCard({ car, onViewDetails }: CarCardProps) {
         ) : (
           <>
             {car.dutyStatus && (
-              <div className="bg-[#D4AF37] text-black text-[9px] font-extrabold px-2 py-0.5 rounded shadow-md uppercase tracking-wider w-fit">
+              <div className="bg-[#E21E26] text-white text-[9px] font-extrabold px-2 py-0.5 rounded shadow-md uppercase tracking-wider w-fit">
                 {car.dutyStatus}
               </div>
             )}
@@ -62,7 +62,7 @@ export default function CarCard({ car, onViewDetails }: CarCardProps) {
         )}
       </div>
       
-      <div className="absolute top-4 right-4 z-10 bg-black/80 backdrop-blur-md px-2.5 py-1 text-[10px] font-mono text-[#D4AF37] rounded-md border border-white/10 font-bold uppercase tracking-wider">
+      <div className="absolute top-4 right-4 z-10 bg-black/80 backdrop-blur-md px-2.5 py-1 text-[10px] font-mono text-[#E21E26] rounded-md border border-white/10 font-bold uppercase tracking-wider">
         {car.year}
       </div>
 
@@ -82,14 +82,14 @@ export default function CarCard({ car, onViewDetails }: CarCardProps) {
       <div className="flex flex-col flex-grow p-4 gap-1">
         <div className="flex justify-between items-start">
           <div>
-            <span className="text-[10px] font-mono tracking-wider text-[#D4AF37]/80 uppercase block">
+            <span className="text-[10px] font-mono tracking-wider text-[#E21E26]/95 uppercase block">
               {car.make}
             </span>
             <h3 className="font-display text-base font-bold text-white line-clamp-1">
               {car.model}
             </h3>
           </div>
-          <span className="text-[#D4AF37] text-base font-bold font-display whitespace-nowrap">
+          <span className="text-[#E21E26] text-base font-bold font-display whitespace-nowrap">
             {formatPrice(car.price)}
           </span>
         </div>
@@ -99,7 +99,7 @@ export default function CarCard({ car, onViewDetails }: CarCardProps) {
           <span className="bg-white/5 px-2 py-1 rounded">{formattedMileage} km</span>
           <span className="bg-white/5 px-2 py-1 rounded">{car.fuelType}</span>
           <span className="bg-white/5 px-2 py-1 rounded">{car.transmission}</span>
-          {car.driveType && <span className="bg-white/5 px-2 py-1 rounded border border-[#D4AF37]/10 text-[#D4AF37]/90">{car.driveType}</span>}
+          {car.driveType && <span className="bg-white/5 px-2 py-1 rounded border border-[#E21E26]/15 text-[#E21E26]/90">{car.driveType}</span>}
           {car.location && <span className="bg-white/5 px-2 py-1 rounded text-gray-300 font-mono">{car.location}</span>}
           {car.conditionGrade && <span className="bg-white/5 px-2 py-1 rounded text-emerald-400">{car.conditionGrade}</span>}
         </div>
@@ -111,7 +111,7 @@ export default function CarCard({ car, onViewDetails }: CarCardProps) {
             onClick={() => onViewDetails(car)}
             className="flex items-center justify-center space-x-1 px-3 py-2 bg-white/5 hover:bg-white/10 text-white rounded-lg text-xs font-semibold select-none cursor-pointer transition-colors duration-200"
           >
-            <Eye className="h-3.5 w-3.5 text-[#D4AF37]" />
+            <Eye className="h-3.5 w-3.5 text-[#E21E26]" />
             <span>Details</span>
           </button>
 

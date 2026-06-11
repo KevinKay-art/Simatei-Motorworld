@@ -311,7 +311,7 @@ export default function App() {
   const allBrands = Array.from(new Set(cars.map((c) => c.make))) as string[];
 
   return (
-    <div className="min-h-screen bg-[#0b0c0e] flex flex-col justify-between selection:bg-amber-500 selection:text-black">
+    <div className="min-h-screen bg-[#0b0c0e] flex flex-col justify-between selection:bg-[#E21E26] selection:text-white">
       {/* Dynamic SEO Meta title changes */}
       <Navbar 
         currentTab={currentTab} 
@@ -323,7 +323,7 @@ export default function App() {
       <main className="flex-grow">
         {isAppLoading ? (
           <div className="flex flex-col items-center justify-center py-48 text-center space-y-4">
-            <div className="h-10 w-10 border-2 border-amber-500 border-t-transparent rounded-full animate-spin" />
+            <div className="h-10 w-10 border-2 border-[#E21E26] border-t-transparent rounded-full animate-spin" />
             <p className="text-gray-400 font-mono text-xs uppercase tracking-widest">
               Connecting Simatei Showrooms...
             </p>
@@ -346,38 +346,38 @@ export default function App() {
                     <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center opacity-75 group-hover:scale-[1.01] transition-transform duration-700"></div>
                     
                     <div className="relative z-20 h-full flex flex-col justify-center px-6 sm:px-12 max-w-3xl">
-                      <span className="text-[#D4AF37] text-xs font-bold uppercase tracking-[0.3em] mb-3 block">
+                      <span className="text-[#E21E26] text-xs font-bold uppercase tracking-[0.3em] mb-3 block">
                         Motion Reimagined
                       </span>
                       <h1 className="font-display text-4xl sm:text-5xl font-extrabold leading-tight text-white mb-4">
                         Find Your Perfect Drive at <br/>
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#F27D26]">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E21E26] via-[#E21E26] to-[#C3141F]">
                           Simatei Motorworld
                         </span>
                       </h1>
                       <p className="text-white/70 text-sm sm:text-base font-light leading-relaxed mb-8 max-w-xl">
-                        Browse, compare, and acquire top-tier imported and local vehicles. From absolute luxury SUVs to fuel-efficient family crossovers — Simatei is the gold standard of Nairobi automobile sourcing.
+                        Browse, compare, and acquire top-tier imported and local vehicles. From absolute luxury SUVs to fuel-efficient family crossovers — Simatei is the premium standard of Nairobi automobile sourcing.
                       </p>
                       
                       <div className="flex flex-wrap gap-4 items-center">
                         <button
                           onClick={() => setCurrentTab("cars")}
-                          className="px-6 py-3.5 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-black font-extrabold text-xs uppercase tracking-widest rounded-full shadow-lg transition-all duration-300 transform active:scale-95"
+                          className="px-6 py-3.5 bg-[#E21E26] hover:bg-[#C3141F] text-white font-extrabold text-xs uppercase tracking-widest rounded-full shadow-lg transition-all duration-300 transform active:scale-95 shadow-[#E21E26]/25 hover:shadow-[#E21E26]/40"
                         >
                           Explore Inventory
                         </button>
                         <button
                           onClick={() => setCurrentTab("contact")}
-                          className="px-6 py-3.5 bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-widest rounded-full border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-300"
+                          className="px-6 py-3.5 bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-widest rounded-full border border-white/10 hover:border-[#E21E26]/30 transition-all duration-300"
                         >
                           Book Appointment
                         </button>
                       </div>
                     </div>
                   </section>
-                </div>                  {/* Quick Horizontal Search Bar */}
+                </div>                    {/* Quick Horizontal Search Bar */}
                   <div className="max-w-4xl mx-auto px-4 mt-16 md:mt-20">
-                    <div className="bg-[#111] border border-[#D4AF37]/10 shadow-2xl p-4 sm:p-5 rounded-2xl relative">
+                    <div className="bg-[#111] border border-white/5 shadow-2xl p-4 sm:p-5 rounded-2xl relative">
                       <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 text-sm">
                         
                         {/* Search Input */}
@@ -388,7 +388,7 @@ export default function App() {
                             placeholder="Search make or model (e.g. Prado, Mercedes)..."
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
-                            className="w-full bg-[#0d0f11] placeholder-gray-500 text-white pl-10 pr-4 py-3.5 rounded-xl border border-white/5 focus:border-[#D4AF37]/40 focus:outline-none focus:ring-1 focus:ring-[#D4AF37]/30 transition-all text-xs"
+                            className="w-full bg-[#0d0f11] placeholder-gray-500 text-white pl-10 pr-4 py-3.5 rounded-xl border border-white/10 focus:border-[#E21E26]/40 focus:outline-none focus:ring-1 focus:ring-[#E21E26]/30 transition-all text-xs"
                           />
                         </div>
 
@@ -397,7 +397,7 @@ export default function App() {
                           <select
                             value={selectedMake}
                             onChange={(e) => setSelectedMake(e.target.value)}
-                            className="w-full bg-[#0d0f11] text-gray-300 py-3.5 px-3 rounded-xl border border-white/5 focus:border-[#D4AF37]/40 focus:outline-none transition-all text-xs"
+                            className="w-full bg-[#0d0f11] text-gray-300 py-3.5 px-3 rounded-xl border border-white/10 focus:border-[#E21E26]/40 focus:outline-none transition-all text-xs"
                           >
                             <option value="all">All Brands</option>
                             {allBrands.map((b) => (
@@ -409,7 +409,7 @@ export default function App() {
                         {/* Search Button redirects to Inventory */}
                         <button
                           onClick={() => setCurrentTab("cars")}
-                          className="w-full bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-black font-extrabold text-xs uppercase tracking-wider py-3 rounded-xl select-none cursor-pointer duration-200"
+                          className="w-full bg-[#E21E26] hover:bg-[#C3141F] text-white font-extrabold text-xs uppercase tracking-wider py-3 rounded-xl select-none cursor-pointer duration-200 shadow-md shadow-[#E21E26]/10"
                         >
                           Filter Vehicles
                         </button>
@@ -421,7 +421,7 @@ export default function App() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                   <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-4 mb-8">
                     <div>
-                      <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#D4AF37]/70 block">Fresh Arrivals</span>
+                      <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#E21E26]/90 block">Fresh Arrivals</span>
                       <h2 className="font-display text-2xl sm:text-3xl font-bold text-white">
                         Simatei Premium Collection
                       </h2>
@@ -431,7 +431,7 @@ export default function App() {
                         setSelectedStatus("available");
                         setCurrentTab("cars");
                       }}
-                      className="text-sm font-mono text-[#D4AF37] hover:text-[#D4AF37]/80 flex items-center space-x-1 outline-none font-bold"
+                      className="text-sm font-mono text-[#E21E26] hover:text-[#C3141F] flex items-center space-x-1 outline-none font-bold"
                     >
                       <span>View full inventory</span>
                       <ChevronRight className="h-4 w-4" />
@@ -456,11 +456,11 @@ export default function App() {
                 {/* 3. Dealership highlights (Nairobi context) */}
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 select-none">
                   <div className="bg-[#111] border border-white/5 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
-                    <div className="absolute top-0 right-0 h-64 w-64 bg-[#D4AF37]/5 rounded-full blur-3xl -mr-16 -mt-16" />
+                    <div className="absolute top-0 right-0 h-64 w-64 bg-[#E21E26]/5 rounded-full blur-3xl -mr-16 -mt-16" />
                     
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                       <div>
-                        <span className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] block">Uncompromising Standards</span>
+                        <span className="text-xs font-mono uppercase tracking-widest text-[#E21E26] block">Uncompromising Standards</span>
                         <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-white mt-2 leading-tight">
                           Why buy from Simatei Motorworld?
                         </h3>
@@ -470,7 +470,7 @@ export default function App() {
                         
                         <div className="mt-8 space-y-4">
                           <div className="flex items-start space-x-3 text-sm">
-                            <div className="bg-[#D4AF37]/10 p-1.5 rounded text-[#D4AF37] mt-0.5"><Check className="h-4 w-4 stroke-[2.5]" /></div>
+                            <div className="bg-[#E21E26]/10 p-1.5 rounded text-[#E21E26] mt-0.5"><Check className="h-4 w-4 stroke-[2.5]" /></div>
                             <div>
                               <span className="block font-bold text-white leading-tight">Authentic Certified Odometer Mileage</span>
                               <span className="block text-xs text-gray-400 mt-0.5 font-light">Zero rollbacks, fully verifiable import sheets provided.</span>
@@ -478,7 +478,7 @@ export default function App() {
                           </div>
                           
                           <div className="flex items-start space-x-3 text-sm">
-                            <div className="bg-[#D4AF37]/10 p-1.5 rounded text-[#D4AF37] mt-0.5"><Check className="h-4 w-4 stroke-[2.5]" /></div>
+                            <div className="bg-[#E21E26]/10 p-1.5 rounded text-[#E21E26] mt-0.5"><Check className="h-4 w-4 stroke-[2.5]" /></div>
                             <div>
                               <span className="block font-bold text-white leading-tight">Custom Sourcing & Logistics</span>
                               <span className="block text-xs text-gray-400 mt-0.5 font-light">Can’t find your dream spec? We import pre-inspected units directly on order.</span>
@@ -486,7 +486,7 @@ export default function App() {
                           </div>
 
                           <div className="flex items-start space-x-3 text-sm">
-                            <div className="bg-[#D4AF37]/10 p-1.5 rounded text-[#D4AF37] mt-0.5"><Check className="h-4 w-4 stroke-[2.5]" /></div>
+                            <div className="bg-[#E21E26]/10 p-1.5 rounded text-[#E21E26] mt-0.5"><Check className="h-4 w-4 stroke-[2.5]" /></div>
                             <div>
                               <span className="block font-bold text-white leading-tight">Saturdays Trade-In Support</span>
                               <span className="block text-xs text-gray-400 mt-0.5 font-light">Bring your current vehicle for clean evaluation and trade-up opportunities.</span>
@@ -497,19 +497,19 @@ export default function App() {
 
                       <div className="grid grid-cols-2 gap-5.5 text-center font-display">
                         <div className="bg-black/30 border border-white/5 p-6 rounded-2xl">
-                          <span className="block text-3xl font-bold text-[#D4AF37]">100%</span>
+                          <span className="block text-3xl font-bold text-[#E21E26]">100%</span>
                           <span className="block text-xs text-gray-400 font-mono uppercase tracking-wider mt-1">Pre-Inspected Fleet</span>
                         </div>
                         <div className="bg-black/30 border border-white/5 p-6 rounded-2xl">
-                          <span className="block text-3xl font-bold text-[#D4AF37]">24 Hour</span>
+                          <span className="block text-3xl font-bold text-[#E21E26]">24 Hour</span>
                           <span className="block text-xs text-gray-400 font-mono uppercase tracking-wider mt-1">Inquiry Turnaround</span>
                         </div>
                         <div className="bg-black/30 border border-white/5 p-6 rounded-2xl">
-                          <span className="block text-3xl font-bold text-[#D4AF37]">95%</span>
+                          <span className="block text-3xl font-bold text-[#E21E26]">95%</span>
                           <span className="block text-xs text-gray-400 font-mono uppercase tracking-wider mt-1">Nairobi Retention</span>
                         </div>
                         <div className="bg-black/30 border border-white/5 p-6 rounded-2xl">
-                          <span className="block text-3xl font-bold text-[#D4AF37]">0%</span>
+                          <span className="block text-3xl font-bold text-[#E21E26]">0%</span>
                           <span className="block text-xs text-gray-400 font-mono uppercase tracking-wider mt-1">Odometer Rollbacks</span>
                         </div>
                       </div>
@@ -530,7 +530,7 @@ export default function App() {
               >
                 {/* Title */}
                 <div className="mb-10 text-center sm:text-left select-none">
-                  <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#D4AF37] font-bold block mb-1">Modern Showroom</span>
+                  <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#E21E26] font-bold block mb-1">Modern Showroom</span>
                   <h1 className="font-display text-3xl font-bold text-white">
                     Simatei Motorworld Inventory
                   </h1>
@@ -546,7 +546,7 @@ export default function App() {
                   <div className="lg:col-span-3 bg-[#111] border border-white/5 p-6 rounded-2xl shadow-xl space-y-6 select-none sticky top-24">
                     <div className="flex items-center justify-between border-b border-white/5 pb-3">
                       <h3 className="text-sm uppercase font-mono tracking-wider text-gray-300 font-bold flex items-center space-x-1.5">
-                        <SlidersHorizontal className="h-4 w-4 text-[#D4AF37]" />
+                        <SlidersHorizontal className="h-4 w-4 text-[#E21E26]" />
                         <span>Filter Fleet</span>
                       </h3>
                       <button
@@ -563,7 +563,7 @@ export default function App() {
                           setSelectedStatus("all");
                           setSortBy("latest");
                         }}
-                        className="text-[10px] font-mono text-[#D4AF37]/80 hover:text-[#D4AF37] hover:underline"
+                        className="text-[10px] font-mono text-[#E21E26]/80 hover:text-[#E21E26] hover:underline"
                       >
                         Reset All
                       </button>
@@ -577,7 +577,7 @@ export default function App() {
                         placeholder="Type model, spec, brand..."
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
-                        className="w-full bg-[#0d0f11] text-xs text-white placeholder-gray-600 px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                        className="w-full bg-[#0d0f11] text-xs text-white placeholder-gray-600 px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                       />
                     </div>
 
@@ -587,7 +587,7 @@ export default function App() {
                       <select
                         value={selectedMake}
                         onChange={(e) => setSelectedMake(e.target.value)}
-                        className="w-full bg-[#0d0f11] text-xs text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                        className="w-full bg-[#0d0f11] text-xs text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                       >
                         <option value="all">All Brands</option>
                         {allBrands.map((b) => (
@@ -602,7 +602,7 @@ export default function App() {
                       <select
                         value={selectedFuel}
                         onChange={(e) => setSelectedFuel(e.target.value)}
-                        className="w-full bg-[#0d0f11] text-xs text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                        className="w-full bg-[#0d0f11] text-xs text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                       >
                         <option value="all">All Fuel Types</option>
                         <option value="petrol">Petrol ONLY</option>
@@ -618,7 +618,7 @@ export default function App() {
                       <select
                         value={selectedTransmission}
                         onChange={(e) => setSelectedTransmission(e.target.value)}
-                        className="w-full bg-[#0d0f11] text-xs text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                        className="w-full bg-[#0d0f11] text-xs text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                       >
                         <option value="all">Any Transmission</option>
                         <option value="automatic">Automatic (Auto)</option>
@@ -632,7 +632,7 @@ export default function App() {
                       <select
                         value={selectedStatus}
                         onChange={(e) => setSelectedStatus(e.target.value)}
-                        className="w-full bg-[#0d0f11] text-xs text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                        className="w-full bg-[#0d0f11] text-xs text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                       >
                         <option value="all">Show All Inventory</option>
                         <option value="available">Available ONLY</option>
@@ -646,7 +646,7 @@ export default function App() {
                       <select
                         value={selectedLocation}
                         onChange={(e) => setSelectedLocation(e.target.value)}
-                        className="w-full bg-[#0d0f11] text-xs text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                        className="w-full bg-[#0d0f11] text-xs text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                       >
                         <option value="all">Any Location</option>
                         <option value="nairobi">Nairobi Showroom</option>
@@ -661,7 +661,7 @@ export default function App() {
                       <select
                         value={selectedDuty}
                         onChange={(e) => setSelectedDuty(e.target.value)}
-                        className="w-full bg-[#0d0f11] text-xs text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                        className="w-full bg-[#0d0f11] text-xs text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                       >
                         <option value="all">Any Clearance</option>
                         <option value="duty paid">Duty Paid</option>
@@ -676,7 +676,7 @@ export default function App() {
                       <select
                         value={selectedImport}
                         onChange={(e) => setSelectedImport(e.target.value)}
-                        className="w-full bg-[#0d0f11] text-xs text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                        className="w-full bg-[#0d0f11] text-xs text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                       >
                         <option value="all">Any Category</option>
                         <option value="foreign used">Foreign Used (Import)</option>
@@ -692,7 +692,7 @@ export default function App() {
                       <select
                         value={selectedBodyType}
                         onChange={(e) => setSelectedBodyType(e.target.value)}
-                        className="w-full bg-[#0d0f11] text-xs text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                        className="w-full bg-[#0d0f11] text-xs text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                       >
                         <option value="all">Any Body Style</option>
                         <option value="suv">SUV / Crossover</option>
@@ -709,7 +709,7 @@ export default function App() {
                     <div>
                       <div className="flex justify-between items-baseline mb-2">
                         <label className="text-xs font-mono text-gray-400 uppercase tracking-wider">Max Price</label>
-                        <span className="text-xs text-[#D4AF37] font-bold font-mono">
+                        <span className="text-xs text-[#E21E26] font-bold font-mono">
                           {maxPrice >= 15000000 ? "Any Price" : `${(maxPrice / 1000000).toFixed(1)}M KES`}
                         </span>
                       </div>
@@ -720,7 +720,7 @@ export default function App() {
                         step={250000}
                         value={maxPrice}
                         onChange={(e) => setMaxPrice(Number(e.target.value))}
-                        className="w-full accent-[#D4AF37] h-1 bg-[#0d0f11] rounded-lg cursor-pointer"
+                        className="w-full accent-[#E21E26] h-1 bg-[#0d0f11] rounded-lg cursor-pointer"
                       />
                     </div>
 
@@ -730,7 +730,7 @@ export default function App() {
                       <select
                         value={sortBy}
                         onChange={(e) => setSortBy(e.target.value)}
-                        className="w-full bg-[#0d0f11] text-xs text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#D4AF37] focus:outline-none"
+                        className="w-full bg-[#0d0f11] text-xs text-white px-3 py-2.5 rounded-lg border border-white/10 focus:border-[#E21E26] focus:outline-none"
                       >
                         <option value="latest">Latest In Showroom</option>
                         <option value="price-low">Price: Low to High</option>
@@ -762,7 +762,7 @@ export default function App() {
                             setMaxPrice(15000000);
                             setSelectedStatus("all");
                           }}
-                          className="px-5 py-2.5 bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-black rounded-lg text-xs font-bold uppercase tracking-wider select-none outline-none mt-2 cursor-pointer transition-colors"
+                          className="px-5 py-2.5 bg-[#E21E26] hover:bg-[#C3141F] text-white rounded-lg text-xs font-bold uppercase tracking-wider select-none outline-none mt-2 cursor-pointer transition-colors shadow-md shadow-[#E21E26]/10"
                         >
                           Clear Active Filters
                         </button>
@@ -857,13 +857,15 @@ export default function App() {
             
             {/* Logo, title & slogan */}
             <div className="md:col-span-5 space-y-4">
-              <div className="flex items-center space-x-2.5">
-                <div className="bg-amber-500 p-2 rounded-lg text-black">
-                  <CarIcon className="h-5 w-5 stroke-[2.5]" />
+              <div className="flex items-center">
+                <div className="bg-white rounded-lg p-1.5 px-4 shadow-lg inline-block">
+                  <img 
+                    src="/simatei-logo.jpg" 
+                    alt="Simatei Motorworld" 
+                    className="h-9 w-auto object-contain"
+                    referrerPolicy="no-referrer"
+                  />
                 </div>
-                <span className="font-display font-bold text-white tracking-tight text-lg">
-                  SIMATEI <span className="text-amber-500">MOTORWORLD</span>
-                </span>
               </div>
               <p className="text-xs text-gray-500 font-light leading-relaxed max-w-sm">
                 Simatei Motorworld is a professional car dealership in Nairobi built to assist vehicle buyers find luxury, longevity, and durability in their automotive selections.
@@ -875,22 +877,22 @@ export default function App() {
               <span className="block text-[10px] font-mono uppercase tracking-[0.2em] text-gray-400 font-semibold">Quick Splay Navigation</span>
               <ul className="space-y-2 text-xs text-gray-400">
                 <li>
-                  <button onClick={() => setCurrentTab("home")} className="hover:text-amber-500 transition-colors">
+                  <button onClick={() => setCurrentTab("home")} className="hover:text-[#E21E26] transition-colors">
                     Home Frontpage
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => setCurrentTab("cars")} className="hover:text-amber-500 transition-colors">
+                  <button onClick={() => setCurrentTab("cars")} className="hover:text-[#E21E26] transition-colors">
                     Simatei Inventory Fleet
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => setCurrentTab("contact")} className="hover:text-amber-500 transition-colors">
+                  <button onClick={() => setCurrentTab("contact")} className="hover:text-[#E21E26] transition-colors">
                     Contact Simatei Directors
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => setCurrentTab("admin")} className="hover:text-amber-500 transition-colors flex items-center space-x-1">
+                  <button onClick={() => setCurrentTab("admin")} className="hover:text-[#E21E26] transition-colors flex items-center space-x-1">
                     <span>Staff Portal Control</span>
                   </button>
                 </li>
@@ -902,28 +904,28 @@ export default function App() {
               <span className="block text-[10px] font-mono uppercase tracking-[0.2em] text-gray-400 font-semibold">Dealership Outlets</span>
               <div className="space-y-2 text-xs text-gray-400 font-light">
                 <p className="flex items-start">
-                  <MapPin className="h-4 w-4 text-amber-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <MapPin className="h-4 w-4 text-[#E21E26] mr-2 flex-shrink-0 mt-0.5" />
                   <span>Langata Road, Nairobi City, Kenya</span>
                 </p>
                 <p className="flex items-center">
-                  <Phone className="h-4 w-4 text-amber-500 mr-2 flex-shrink-0" />
-                  <a href="tel:0740892332" className="hover:text-amber-500 font-bold">0740892332</a>
+                  <Phone className="h-4 w-4 text-[#E21E26] mr-2 flex-shrink-0" />
+                  <a href="tel:0740892332" className="hover:text-[#E21E26] font-bold">0740892332</a>
                 </p>
                 <p className="flex items-center">
                   <MessageCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
-                  <a href="https://wa.me/254740892332" target="_blank" rel="noopener noreferrer" className="hover:text-amber-500 font-bold">wa.me/254740892332</a>
+                  <a href="https://wa.me/254740892332" target="_blank" rel="noopener noreferrer" className="hover:text-[#E21E26] font-bold">wa.me/254740892332</a>
                 </p>
               </div>
 
               {/* Social links icons */}
               <div className="flex px-1 space-x-3.5 pt-1.5">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-amber-500 transition-colors">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#E21E26] transition-colors">
                   <Facebook className="h-4.5 w-4.5" />
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-amber-500 transition-colors">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#E21E26] transition-colors">
                   <Instagram className="h-4.5 w-4.5" />
                 </a>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-amber-500 transition-colors">
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#E21E26] transition-colors">
                   <Youtube className="h-4.5 w-4.5" />
                 </a>
               </div>

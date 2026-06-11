@@ -26,10 +26,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D4AF37; /* Immersive UI gold */
+  background: #E21E26; /* Simatei Brand Red */
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #F27D26; /* Immersive UI secondary gradient end */
+  background: #C3141F; /* Simatei Deep Red hover */
 }
